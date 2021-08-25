@@ -10,6 +10,7 @@ namespace RulePayment.PaymentService.Services
         public void AddPayment()
         {
             Console.WriteLine("Generate Packing Slip for shipping.");
+            CommonData.GetCommision("PhysicalProduct");
         }
     }
 }

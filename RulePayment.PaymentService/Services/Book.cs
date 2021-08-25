@@ -5,11 +5,12 @@ using System.Text;
 
 namespace RulePayment.PaymentService.Services
 {
-    class Book : IPaymentService
+    public class Book : IPaymentService
     {
         public void AddPayment()
         {
             Console.WriteLine("Create duplicate shipping slip for royality department.");
+            CommonData.GetCommision("Book");
         }
     }
 }
