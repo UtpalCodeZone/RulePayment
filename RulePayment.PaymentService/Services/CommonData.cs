@@ -15,5 +15,10 @@ namespace RulePayment.PaymentService.Services
         {
             Console.WriteLine($"Add free first aid video for {obj}");
         }
+
+        public static void GetEmail(string obj)
+        {
+            Console.WriteLine($"Email for {obj}");
+        }
     }
 }

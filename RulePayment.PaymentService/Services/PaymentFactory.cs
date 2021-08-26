@@ -14,26 +14,27 @@ namespace RulePayment.PaymentService.Services
             
             switch(objName)
             {
-                case "PhysicalProduct":
+                case "1":
                     paymentService = new PhysicalProduct();
                     break;
-                case "Book":
+                case "2":
                     paymentService = new Book();
                     break;
-                case "Membership":
-                case "UpgradeMembership":
+                case "3":
                     paymentService = new Membership();
-                    break;               
-                case "Video":
+                    break;
+                case "4":
+                    paymentService = new UpgradeMembership();
+                    break;
+                case "5":
                     paymentService = new VideoService();
+                    break;
+                default:
+                    paymentService = null;
+                    Console.WriteLine("Proper name is not selected!");
                     break;
             }
             return paymentService;
-        }
-
-        public void GetSelectedType()
-        {
-
         }
     }
 }

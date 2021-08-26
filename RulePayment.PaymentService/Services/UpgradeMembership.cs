@@ -5,12 +5,12 @@ using System.Text;
 
 namespace RulePayment.PaymentService.Services
 {
-    public class VideoService : IPaymentService
+    public class UpgradeMembership : IPaymentService
     {
         public void AddPayment()
         {
-            Console.WriteLine("Free add video to the packing slip.");
-            CommonData.GetVideo("“Learning to Ski");
+            Console.WriteLine("Upgrade the membership");
+            CommonData.GetEmail("upgrade");
         }
     }
 }

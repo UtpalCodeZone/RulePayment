@@ -5,13 +5,15 @@ using System.Text;
 
 namespace RulePayment.PaymentService.Services
 {
-    public class PaymentService
+    public static class PaymentService
     {
-        public void GetService(string serviceType)
+        public static void GetService(string serviceType)
         {
             IPaymentService paymentService = PaymentFactory.GetService(serviceType);
-            paymentService.AddPayment();
-        }
-        
+            if(paymentService != null)
+            {
+                paymentService.AddPayment();
+            }            
+        }        
     }
 }

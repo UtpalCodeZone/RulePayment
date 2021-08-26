@@ -10,11 +10,7 @@ namespace RulePayment.PaymentService.Services
         public void AddPayment()
         {
             Console.WriteLine("Activate the membership.");
-        }
-
-        public void Upgrade()
-        {
-            Console.WriteLine("Upgrade the membership");
-        }
+            CommonData.GetEmail("activation");
+        }        
     }
 }
