@@ -13,7 +13,7 @@ namespace RulePayment.PaymentService.Services
             if(paymentService != null)
             {
                 paymentService.AddPayment();
-            }            
+            }
         }        
     }
 }
