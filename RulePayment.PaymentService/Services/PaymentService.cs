@@ -10,10 +10,10 @@ namespace RulePayment.PaymentService.Services
         public static void GetService(string serviceType)
         {
             IPaymentService paymentService = PaymentFactory.GetService(serviceType);
-            if(paymentService != null)
+            if (paymentService != null)
             {
                 paymentService.AddPayment();
-            }
+            }            
         }        
     }
 }

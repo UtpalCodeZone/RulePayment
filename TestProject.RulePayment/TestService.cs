@@ -1,6 +1,8 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RulePayment.PaymentService.Services;
 using System;
 using Xunit;
+using Assert = Xunit.Assert;
 
 namespace TestProject.RulePayment
 {
@@ -29,8 +31,14 @@ namespace TestProject.RulePayment
             check = true;
 
             Assert.True(check);
+        }
 
-
+        [Fact]
+        [Priority(0)]
+        [ExpectedException(typeof(ArgumentException))]
+        public void CheckNullForServiceType()
+        { 
+            PaymentService.GetService(null);
         }
     }
 }

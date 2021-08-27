@@ -10,6 +10,7 @@ namespace RulePayment.PaymentService.Services
     {
         public static IPaymentService GetService(string objName)
         {
+
             IPaymentService paymentService = null;
             
             switch(objName)
@@ -29,10 +30,10 @@ namespace RulePayment.PaymentService.Services
                 case "5":
                     paymentService = new VideoService();
                     break;
-                default:
-                    paymentService = null;
-                    Console.WriteLine("Proper name is not selected!");
-                    break;
+                //default:
+                //    paymentService = null;
+                //    Console.WriteLine("Proper name is not selected!");
+                //    break;
             }
             return paymentService;
         }
